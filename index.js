@@ -144,6 +144,17 @@ function addToCart() {
     }
 }
 
+function clicking() {
+    $('#sell-form').on('submit', function(event) {
+        event.preventDefault();
+        var name = $('#fullName').val();
+        var price = $('#price').val();
+        var quantity = $('#quantity').val();
+        var description = $('#product').val();
+        console.log(name, price, quantity, description);
+    });
+}
+
 function loadCart() {
     var inventory = PAGE_DATA.inventory;
     var html = inventory
@@ -191,6 +202,7 @@ function constructSell(item) {
 
 function main() {
     loadInventory();
+    clicking();
     // attatchHandlers();
 
     // $('#selling').on('submit', function(event) {
