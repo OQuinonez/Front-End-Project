@@ -7,7 +7,7 @@ var PAGE_DATA = {
             description:
                 'Voice prompts talk you through Bluetooth pairing so it’s easier than ever—or even quick-pair with NFC devices,lets you enjoy up to 8 hours of play time',
             price: '129.00',
-            quantity: 8,
+            quantity: '8',
             img:
                 'https://images.crutchfieldonline.com/ImageHandler/trim/620/378/products/2016/36/018/g018SLCR2B-F.jpg'
         },
@@ -16,7 +16,7 @@ var PAGE_DATA = {
             description:
                 'Package comes with two American DJ Black-24BLB 2 Foot Black Lights that are made of durable and high quality material.',
             price: '39.98',
-            quantity: 10,
+            quantity: '10',
             img:
                 'https://images-na.ssl-images-amazon.com/images/I/41lZed26lXL._SX300_.jpg'
         },
@@ -25,7 +25,7 @@ var PAGE_DATA = {
             description:
                 'This professional-quality microphone is designed to capture your sounds with outstanding sensitivity and accuracy',
             price: '19.99',
-            quantity: 28,
+            quantity: '28',
             img:
                 'https://www.bhphotovideo.com/images/images2500x2500/Behringer_XM8500_XM8500_Dynamic_ULTRAVOICE_215145.jpg'
         },
@@ -34,7 +34,7 @@ var PAGE_DATA = {
             description:
                 'Live Wire Elite cables have the strength and durability to withstand more than everyday use.',
             price: '39.99',
-            quantity: 8,
+            quantity: '8',
             img:
                 'https://images-na.ssl-images-amazon.com/images/I/71zSrGXvvHL._SX554_.jpg'
         },
@@ -44,7 +44,7 @@ var PAGE_DATA = {
             description:
                 'The Chauvet DJ FXarray Q5 Wash Light is an exciting and versatile quad-color LED wash light. It features an array of RGB+UV LEDs to spread light evenly across the dance floor',
             price: '149.99',
-            quantity: 13,
+            quantity: '13',
             img:
                 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSI__i05-PCfdXJOTcj5efZkCdqCWp9-rCaFPBSQPQvudN1XzNZBRjmCLxZcZYeFX8Ye4iqOFnH&usqp=CAE'
         },
@@ -53,7 +53,7 @@ var PAGE_DATA = {
             description:
                 'Protect your valuable gear with this rugged Gator mixer case constructed of nearly indestructible lightweight polyethylene.',
             price: '239.99',
-            quantity: 5,
+            quantity: '5',
             img:
                 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJXvZDF9kE0yUjCebl7AjfK_DIvWc8twK2F3EiQYgYlEr_8MYPom3X3qlU8mL5jbnP5caH92Br&usqp=CAE'
         },
@@ -62,7 +62,7 @@ var PAGE_DATA = {
             description:
                 'Low-cost high-performance mixers Soundcraft have unveiled another addition to the rapidly growing new Soundcraft family, the multi-format low-cost EPM mixers.',
             price: '248.00',
-            quantity: 5,
+            quantity: '5',
             img:
                 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxg-sm_d2iuGsyUZTMkf-P2Nd0r1QMqWu5MGlMs0phw1ESrBiYeUmP-plRh-zEAx4qBNp7rgA&usqp=CAE'
         },
@@ -71,7 +71,7 @@ var PAGE_DATA = {
             description:
                 'This Frameworks Deluxe Tripod mic stand features heavy-duty steel construction and a convenient soft-grip one-handed height adjustment clutch.',
             price: '39.99',
-            quantity: 15,
+            quantity: '15',
             img:
                 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTJhqWPcuyLI41B9VQoQ4jmvzoB8l5zq34TkZxWOsjjFTUmYHB3fUl5Lazfq-hSd8AtnvIXgDs&usqp=CAE'
         },
@@ -80,7 +80,7 @@ var PAGE_DATA = {
                 'Fog Machine - 500 Watt Mini Fog Machine with Remote and Fog Juice',
             description: 'Impressive 2,000 Cubic ft. per minute',
             price: '39.99',
-            quantity: 23,
+            quantity: '23',
             img:
                 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS3y-HMv2y8JXgKJQHh1mIbTW8l65T-ZCh5Y9Lo2WPc82TWe6OL&usqp=CAE'
         }
@@ -144,16 +144,16 @@ function addToCart() {
     }
 }
 
-function clicking() {
-    $('#sell-form').on('submit', function(event) {
-        event.preventDefault();
-        var name = $('#fullName').val();
-        var price = $('#price').val();
-        var quantity = $('#quantity').val();
-        var description = $('#product').val();
-        console.log(name, price, quantity, description);
-    });
-}
+// function clicking() {
+//     $('#sell-form').on('submit', function(event) {
+//         event.preventDefault();
+//         var name = $('#fullName').val();
+//         var price = $('#price').val();
+//         var quantity = $('#quantity').val();
+//         var description = $('#product').val();
+//         console.log(name, price, quantity, description);
+//     });
+// }
 
 function loadCart() {
     var inventory = PAGE_DATA.inventory;
@@ -196,23 +196,25 @@ function constructSell(item) {
         name: $('#product').val(),
         description: $('#description').val(),
         price: $('#price').val(),
-        fullName: $('#fullName').val()
+        fullName: $('#fullName').val(),
+        quantity: $('#quantity').val(),
+        img: $('#img').val()
     };
 }
 
 function main() {
     loadInventory();
-    clicking();
+    // clicking();
     // attatchHandlers();
 
-    // $('#selling').on('submit', function(event) {
-    // event.preventDefault();
-    // var name = $('#fullName');
-    // console.log(name);
-    // PAGE_DATA.inventory.splice(0, 0, constructSell(name));
-    // $('fullName').val('');
-    // loadInventory();
-    // });
+    $('#sell-form').on('submit', function(event) {
+        event.preventDefault();
+        var name = $('#fullName');
+        console.log(name);
+        PAGE_DATA.inventory.splice(0, 0, constructSell(name));
+        $('fullName').val('');
+        loadInventory();
+    });
 }
 
 $(main);
