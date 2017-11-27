@@ -9,7 +9,8 @@ var PAGE_DATA = {
             price: '129.00',
             quantity: '8',
             img:
-                'https://images.crutchfieldonline.com/ImageHandler/trim/620/378/products/2016/36/018/g018SLCR2B-F.jpg'
+                'https://images.crutchfieldonline.com/ImageHandler/trim/620/378/products/2016/36/018/g018SLCR2B-F.jpg',
+            seller: 'O Party Room'
         },
         {
             name: 'DJ Black-24BLB 24 inch UV Black Pro Blacklight',
@@ -18,7 +19,8 @@ var PAGE_DATA = {
             price: '39.98',
             quantity: '10',
             img:
-                'https://images-na.ssl-images-amazon.com/images/I/41lZed26lXL._SX300_.jpg'
+                'https://images-na.ssl-images-amazon.com/images/I/41lZed26lXL._SX300_.jpg',
+            seller: 'O Party Room'
         },
         {
             name: 'Behringer Ultravoice XM8500 Microphone',
@@ -27,7 +29,8 @@ var PAGE_DATA = {
             price: '19.99',
             quantity: '28',
             img:
-                'https://www.bhphotovideo.com/images/images2500x2500/Behringer_XM8500_XM8500_Dynamic_ULTRAVOICE_215145.jpg'
+                'https://www.bhphotovideo.com/images/images2500x2500/Behringer_XM8500_XM8500_Dynamic_ULTRAVOICE_215145.jpg',
+            seller: 'O Party Room'
         },
         {
             name: "Pro Co S12NQ-25 Speakon-TS Speaker Cable - 25'",
@@ -36,7 +39,8 @@ var PAGE_DATA = {
             price: '39.99',
             quantity: '8',
             img:
-                'https://images-na.ssl-images-amazon.com/images/I/71zSrGXvvHL._SX554_.jpg'
+                'https://images-na.ssl-images-amazon.com/images/I/71zSrGXvvHL._SX554_.jpg',
+            seller: 'O Party Room'
         },
         {
             name:
@@ -46,7 +50,8 @@ var PAGE_DATA = {
             price: '149.99',
             quantity: '13',
             img:
-                'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSI__i05-PCfdXJOTcj5efZkCdqCWp9-rCaFPBSQPQvudN1XzNZBRjmCLxZcZYeFX8Ye4iqOFnH&usqp=CAE'
+                'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSI__i05-PCfdXJOTcj5efZkCdqCWp9-rCaFPBSQPQvudN1XzNZBRjmCLxZcZYeFX8Ye4iqOFnH&usqp=CAE',
+            seller: 'O Party Room'
         },
         {
             name: 'Gator G-MIX 20X25 - 20" x 25" ATA Mixer Case',
@@ -55,7 +60,8 @@ var PAGE_DATA = {
             price: '239.99',
             quantity: '5',
             img:
-                'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJXvZDF9kE0yUjCebl7AjfK_DIvWc8twK2F3EiQYgYlEr_8MYPom3X3qlU8mL5jbnP5caH92Br&usqp=CAE'
+                'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJXvZDF9kE0yUjCebl7AjfK_DIvWc8twK2F3EiQYgYlEr_8MYPom3X3qlU8mL5jbnP5caH92Br&usqp=CAE',
+            seller: 'O Party Room'
         },
         {
             name: 'Soundcraft EPM8 8 Channel Multi Purpose Mixing Console',
@@ -64,7 +70,8 @@ var PAGE_DATA = {
             price: '248.00',
             quantity: '5',
             img:
-                'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxg-sm_d2iuGsyUZTMkf-P2Nd0r1QMqWu5MGlMs0phw1ESrBiYeUmP-plRh-zEAx4qBNp7rgA&usqp=CAE'
+                'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxg-sm_d2iuGsyUZTMkf-P2Nd0r1QMqWu5MGlMs0phw1ESrBiYeUmP-plRh-zEAx4qBNp7rgA&usqp=CAE',
+            seller: 'O Party Room'
         },
         {
             name: 'Gator Frameworks GFW-MIC-2100 Deluxe Tripod Mic Stand',
@@ -73,7 +80,8 @@ var PAGE_DATA = {
             price: '39.99',
             quantity: '15',
             img:
-                'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTJhqWPcuyLI41B9VQoQ4jmvzoB8l5zq34TkZxWOsjjFTUmYHB3fUl5Lazfq-hSd8AtnvIXgDs&usqp=CAE'
+                'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTJhqWPcuyLI41B9VQoQ4jmvzoB8l5zq34TkZxWOsjjFTUmYHB3fUl5Lazfq-hSd8AtnvIXgDs&usqp=CAE',
+            seller: 'O Party Room'
         },
         {
             name:
@@ -82,7 +90,8 @@ var PAGE_DATA = {
             price: '39.99',
             quantity: '23',
             img:
-                'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS3y-HMv2y8JXgKJQHh1mIbTW8l65T-ZCh5Y9Lo2WPc82TWe6OL&usqp=CAE'
+                'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS3y-HMv2y8JXgKJQHh1mIbTW8l65T-ZCh5Y9Lo2WPc82TWe6OL&usqp=CAE',
+            seller: 'O Party Room'
         }
     ]
 };
@@ -108,6 +117,9 @@ function getInventory(inventory) {
         inventory.quantity +
         '<p></p>' +
         addCartBtn(inventory) +
+        '<br><br><br>' +
+        '<b> Seller: </b>' +
+        inventory.seller +
         '</div>';
     return html;
 }
@@ -198,7 +210,8 @@ function constructSell(item) {
         price: $('#price').val(),
         fullName: $('#fullName').val(),
         quantity: $('#quantity').val(),
-        img: $('#img').val()
+        img: $('#img').val(),
+        seller: $('#fullName').val()
     };
 }
 
