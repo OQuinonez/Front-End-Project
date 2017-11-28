@@ -7,9 +7,7 @@
     background-image: url('other.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 200; */
-    margin-right: -170px;
-    margin-left: -170px;
+    width: 200;
     padding-bottom: 20px;
     padding-top: 20px;
 }
