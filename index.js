@@ -138,10 +138,12 @@ function takeAway() {
     var inventory = PAGE_DATA.inventory;
     for (var i in inventory) {
         console.log(inventory[i].quantity);
-        if (inventory[i].quantity > 0) {
-            inventory[i].quantity = inventory[i].quantity - 1;
-        } else {
-            inventory[i].quantity = 0;
+        if (inventory[i].name) {
+            if (inventory[i].quantity > 0) {
+                inventory[i].quantity = inventory[i].quantity - 1;
+            } else {
+                inventory[i].quantity = 0;
+            }
         }
     }
     console.log(inventory);
