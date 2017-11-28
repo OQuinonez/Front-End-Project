@@ -205,7 +205,7 @@ function addCartBtn(inventory) {
         );
     } else if (inventory.quantity <= 0) {
         answer.push(
-            '<div class="warning"> <p> Item is out of stock sorry! </p></div>'
+            '<div class="warning"> <b> Item is out of stock sorry! </b></div>'
         );
     }
     return answer.join('');
