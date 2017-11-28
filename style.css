@@ -12,6 +12,11 @@
     padding-top: 20px;
 }
 
+.other-warning {
+    color: red;
+    font-size: 1.5em;
+}
+
 .warning {
     color: red;
 }
