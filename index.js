@@ -134,12 +134,17 @@ function loadInventory() {
     $('#selling').html(html);
 }
 
-function takeAway(inventory) {
-    if (inventory.quantity > 0) {
-        inventory.quantity = inventory.quantity - 1;
+function takeAway() {
+    var inventory = PAGE_DATA.inventory;
+    for (var i in inventory) {
+        console.log(inventory.quantity);
+        if (inventory[i].quantity > 0) {
+            inventory[i].quantity = inventory[i].quantity - 1;
+        } else {
+            inventory[i].quantity = 0;
+        }
     }
-    console.log(inventory.quantity);
-    return inventory.quantity;
+    return inventory[i].quantity;
 }
 
 function addToCart() {
@@ -178,11 +183,12 @@ function loadCart() {
 }
 
 function attatchHandlers() {
-    var inventory = PAGE_DATA.inventory;
-    takeAway(inventory);
-    loadCart();
-    console.log(loadCart());
-    console.log('Hello World');
+    // var inventory = PAGE_DATA.inventory;
+    takeAway();
+    // console.log(takeAway());
+    // loadCart();
+    // console.log(loadCart());
+    // console.log('Hello World');
 }
 
 function addCartBtn(inventory) {
