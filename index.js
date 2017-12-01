@@ -137,7 +137,6 @@ function loadInventory() {
 function takeAway() {
     var inventory = PAGE_DATA.inventory;
     for (var i in inventory) {
-        console.log(inventory[i].quantity);
         if (inventory[i].name) {
             if (inventory[i].quantity > 0) {
                 inventory[i].quantity = inventory[i].quantity - 1;
@@ -146,7 +145,6 @@ function takeAway() {
             }
         }
     }
-    console.log(inventory);
     $('#selling').html(inventory);
     loadInventory();
 }
@@ -156,10 +154,8 @@ function addToCart() {
     var html = '<li>';
     for (var i in inventory) {
         if (inventory[i]) {
-            // console.log(inventory[i].quantity);
             $('#purchase').click(function() {
                 takeAway(inventory[i].quantity);
-                console.log(inventory[i].quantity);
             });
         }
     }
@@ -172,7 +168,6 @@ function addToCart() {
 //         var price = $('#price').val();
 //         var quantity = $('#quantity').val();
 //         var description = $('#product').val();
-//         console.log(name, price, quantity, description);
 //     });
 // }
 
@@ -189,10 +184,7 @@ function loadCart() {
 function attatchHandlers() {
     // var inventory = PAGE_DATA.inventory;
     takeAway();
-    // console.log(takeAway());
     // loadCart();
-    // console.log(loadCart());
-    // console.log('Hello World');
 }
 
 function addCartBtn(inventory) {
@@ -233,7 +225,6 @@ function main() {
     $('#sell-form').on('submit', function(event) {
         event.preventDefault();
         var name = $('#fullName');
-        console.log(name);
         PAGE_DATA.inventory.splice(0, 0, constructSell(name));
         $('fullName').val('');
         loadInventory();
