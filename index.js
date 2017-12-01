@@ -136,14 +136,16 @@ function loadInventory() {
 
 function takeAway() {
     var inventory = PAGE_DATA.inventory;
-    for (var i in inventory) {
-        if (inventory[i].name) {
-            if (inventory[i].quantity > 0) {
-                inventory[i].quantity = inventory[i].quantity - 1;
-            } else {
-                inventory[i].quantity = 0;
-            }
+
+    // for (var i in inventory) {
+    console.log(inventory);
+    if (inventory[i].name) {
+        if (inventory[i].quantity > 0) {
+            inventory[i].quantity = inventory[i].quantity - 1;
+        } else {
+            inventory[i].quantity = 0;
         }
+        // }
     }
     $('#selling').html(inventory);
     loadInventory();
@@ -194,7 +196,7 @@ function addCartBtn(inventory) {
         //     takeAway(inventory);
         // });
         answer.push(
-            '<button type="button" id="purchase" onclick="attatchHandlers()">' +
+            '<button type="button" id="purchase" data-inventory-name="name" onclick="attatchHandlers()">' +
                 '<i class="fa fa-shopping-cart" aria-hidden="true"></i>Add to cart</button>'
         );
     } else if (inventory.quantity <= 0) {
