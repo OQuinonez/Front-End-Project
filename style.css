@@ -4,7 +4,7 @@
 } */
 .title {
     color: white;
-    background-image: url('other.jpeg');
+    background-image: url('static/other.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 200;
