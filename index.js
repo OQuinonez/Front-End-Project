@@ -122,7 +122,9 @@ var PAGE_DATA = {
         }
     ]
 };
+var myTotal = 0;
 var cart = [];
+var total = [];
 
 function getInventory(inventory) {
     var html = '<h4>';
@@ -166,12 +168,16 @@ function takeAway(target) {
     var inventory = PAGE_DATA.inventory;
     var name = target.attributes['data-inventory-name'].value;
     var cost = target.attributes['data-inventory-price'].value;
-    var bob = event.currentTarget.i;
     cart.push('<li>' + name + '</li>');
+    total.push(cost);
+    for (var i = 0, len = total.length; i < len; i++) {
+        myTotal += parseFloat(total[i]);
+    }
     var items = $('#items').val();
-    $('#items').html(cart); //$('#selling').html(inventory);
-    console.log(cart);
-    console.log(cost);
+    $('#items').html(cart);
+    $('#final').html(
+        myTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    );
     loadInventory();
 }
 
