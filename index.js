@@ -126,41 +126,46 @@ var myTotal = 0;
 var cart = [];
 var total = [];
 
-function getInventory(inventory) {
+function getInventory(i) {
+    var item = PAGE_DATA.inventory[i];
     var html = '<h4>';
     html +=
         '<div class="col-lg-4 col-md-4 col-sm-4 products">' +
         '<img src="' +
-        inventory.img +
+        item.img +
         '">' +
         '<p></p>' +
         '<b>Name: </b>' +
-        inventory.name +
+        item.name +
         '<br>' +
         '<b>Description: </b>' +
-        inventory.description +
+        item.description +
         '<br>' +
         '<b>Price: $</b>' +
-        inventory.price +
+        item.price +
         '<br>' +
         '<b>Quantity: </b>' +
-        inventory.quantity +
+        item.quantity +
         '<p></p>' +
-        addCartBtn(inventory) +
+        addCartBtn(item) +
         '<br><br><br>' +
         '<b> Seller: </b>' +
-        inventory.seller +
+        item.seller +
         '</div>';
     return html;
 }
 
 function loadInventory() {
-    var inventory = PAGE_DATA.inventory;
-    var html = inventory
-        .map(function(inventory) {
-            return getInventory(inventory);
-        })
-        .join('');
+    var html = '';
+    for (var c = 0; c < PAGE_DATA.inventory.length; c++) {
+        html += getInventory(c);
+    }
+    // var inventory = PAGE_DATA.inventory;
+    // var html = inventory
+    //     .map(function(inventory) {
+    //         return getInventory(inventory);
+    // })
+    // .join('');
     $('#selling').html(html);
 }
 
