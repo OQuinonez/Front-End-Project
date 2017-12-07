@@ -169,13 +169,27 @@ function loadInventory() {
     $('#selling').html(html);
 }
 
+function removeQuantity(i) {
+    var stock = PAGE_DATA.inventory[i].quantity;
+    stock = Math.max(0, stock - 1);
+    PAGE_DATA.items[i].quantity = stock;
+}
+
 function takeAway(target) {
     var inventory = PAGE_DATA.inventory;
+    for (var c = 0; c < inventory.length; c++) {
+        var stock = inventory[c].quantity;
+        stock = Math.max(0, stock - 1);
+        console.log(stock);
+        inventory[i].quantity = stock;
+        // removeQuantity(c);
+    }
     var name = target.attributes['data-inventory-name'].value;
     var cost = target.attributes['data-inventory-price'].value;
     cart.push('<li>' + name + '</li>');
     total.push(cost);
     for (var i = 0, len = total.length; i < len; i++) {
+        console.log(total[i]);
         myTotal += parseFloat(total[i]);
     }
     var items = $('#items').val();
