@@ -145,6 +145,7 @@ function takeAway(i) {
     var stock = PAGE_DATA.inventory[i].quantity;
     var product = PAGE_DATA.inventory[i].name;
     cart.push(product);
+    console.log(cart);
     if (stock > 0) {
         stock -= 1;
         PAGE_DATA.inventory[i].quantity = stock;
@@ -152,6 +153,7 @@ function takeAway(i) {
             '<ul>' +
             cart
                 .map(function(element) {
+                    console.log(element);
                     return '<li>' + element + '</li>';
                 })
                 .join('') +
@@ -160,7 +162,6 @@ function takeAway(i) {
         $('#items').html(showCart);
         var cost = PAGE_DATA.inventory[i].price;
         console.log(PAGE_DATA.inventory[i].quantity);
-        cart.push(product);
         myTotal += Number(cost);
         $('#final').html(
             myTotal.toLocaleString('en-US', {
