@@ -97,7 +97,6 @@ var PAGE_DATA = {
 };
 var myTotal = 0;
 var cart = [];
-var total = [];
 
 function getInventory(i) {
     var item = PAGE_DATA.inventory[i];
@@ -139,22 +138,16 @@ function loadInventory() {
     for (var c = 0; c < PAGE_DATA.inventory.length; c++) {
         html += getInventory(c);
     }
-    // var inventory = PAGE_DATA.inventory;
-    // var html = inventory
-    //     .map(function(inventory) {
-    //         return getInventory(inventory);
-    // })
-    // .join('');
     $('#selling').html(html);
 }
 
 function takeAway(i) {
     var stock = PAGE_DATA.inventory[i].quantity;
-    stock -= 1;
-    PAGE_DATA.inventory[i].quantity = stock;
+    var product = PAGE_DATA.inventory[i].name;
+    cart.push(product);
     if (stock > 0) {
-        var product = PAGE_DATA.inventory[i].name;
-        cart.push(product);
+        stock -= 1;
+        PAGE_DATA.inventory[i].quantity = stock;
         var showCart =
             '<ul>' +
             cart
@@ -220,11 +213,6 @@ function addCartBtn(item) {
 }
 
 function constructSell(item) {
-    var button =
-        '<button type="button" id="purchase" data-inventory-name="' +
-        $('#product').val() +
-        '" onclick="takeAway(this)">' +
-        '<i class="fa fa-shopping-cart" aria-hidden="true"></i>Add to cart</button>';
     return {
         name: $('#product').val(),
         description: $('#description').val(),
@@ -232,15 +220,12 @@ function constructSell(item) {
         fullName: $('#fullName').val(),
         quantity: $('#quantity').val(),
         img: $('#img').val(),
-        seller: $('#fullName').val(),
-        btn: button
+        seller: $('#fullName').val()
     };
 }
 
 function main() {
     loadInventory();
-    // clicking();
-    // takeAway(this);
 
     $('#sell-form').on('submit', function(event) {
         event.preventDefault();
