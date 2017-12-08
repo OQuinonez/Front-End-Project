@@ -127,9 +127,8 @@ function getInventory(i) {
             ')">' +
             '<i class="fa fa-shopping-cart" aria-hidden="true"></i>Add to cart</button>';
     } else if (item.quantity <= 0) {
-        answer.push(
-            '<div class="warning"> <b> Item is out of stock sorry! </b></div>'
-        );
+        html +=
+            '<div class="warning"> <b> Item is out of stock sorry! </b></div>';
     }
     html += '<br><br><br>' + '<b> Seller: </b>' + item.seller + '</div>';
     return html;
@@ -177,28 +176,6 @@ function takeAway(i) {
             })
         );
     }
-    // var inventory = PAGE_DATA.inventory;
-    // for (var c = 0; c < PAGE_DATA.inventory.length; c++) {
-    //     console.log(PAGE_DATA.inventory[c].name);
-    //     var stock = PAGE_DATA.inventory[c].quantity;
-    //     stock = Math.max(0, stock - 1);
-    // console.log(stock);
-    // inventory[i].quantity = stock;
-    // removeQuantity(c);
-    // }
-    // var name = target.attributes['data-inventory-name'].value;
-    // var cost = target.attributes['data-inventory-price'].value;
-    // cart.push('<li>' + name + '</li>');
-    // total.push(cost);
-    // for (var i = 0, len = total.length; i < len; i++) {
-    //     console.log(total[i]);
-    //     myTotal += parseFloat(total[i]);
-    // }
-    // var items = $('#items').val();
-    // $('#items').html(cart);
-    // $('#final').html(
-    //     myTotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-    // );
     loadInventory();
 }
 
