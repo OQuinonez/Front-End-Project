@@ -14,8 +14,8 @@
 }
 
 .jumbotron {
-    background-color: rgb(75, 86, 169);
-    color: rgb(199, 204, 241);
+    background-color: rgb(255, 172, 146);
+    color: rgb(216, 98, 60);
 }
 
 .warning {
@@ -65,7 +65,7 @@ img {
 }
 
 .container-fluid {
-    background-color: rgb(75, 86, 169);
+    background-color: rgb(0, 0, 0);
     color: rgb(199, 204, 241);
 }
 
